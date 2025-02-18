@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <title>Cart</title>
+  </head>
+  <body>
+    <header>
+        <a href="index.html"><img id="logo" src="logo.png" alt="Website logo" style="width: 100px; height: auto;"></a>
+        <nav>
+          <a href="userspage.html">User's Page</a>
+          <a href="Seller.html">Seller's Dashboard</a>
+          <a href="cart.html">Cart</a>
+          <div class="categories">
+            <span>Categories:</span>
+            <a href="CoffeeBeans.html">CoffeeBeans</a>
+            <a href="Equipments.html">Equipments</a>
+            <a href="cups.html">Cups</a>
+        </div>
+        </nav>
+  </header>
+    <div class="pages">
+      <div id="cartContainer">
+        <h1>Cart</h1>
+        <input type="button" value="Clear Cart" />
+      </div>
+      <table class="tables">
+        <thead>
+          <tr>
+            <th colspan="2">Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div id="total">
+      <h2>Cart total</h2>
+      <table class="total">
+        <tr>
+          <td>Subtotal</td>
+          <td>5441 SR</td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td>5441 SR</td>
+        </tr>
+      </table>
+      <input
+        type="button"
+        value="Proceed to checkout"
+        onclick="location.href='confirmation.html';"
+      />
+    </div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <div class="phone">
+                    <img src="call.png" alt="Phone Icon">
+                    <span>0012297778</span>
+                </div>
+                <div class="email">
+                    <img src="emaill.png" alt="Email Icon">
+                    <span>Genad@core.com</span>
+                </div>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="instagram.png" alt="instagram Icon"></a>
+                <a href="#"><img src="facebook.png" alt="facebook Icon"></a>
+                <a href="#"><img src="twitter.png" alt="twitter Icon"></a>
+            </div>
+            <div class="copy">
+                <span>© 2024 Genad. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const cartContainer = document.querySelector("tbody");
+        const subtotalElement = document.querySelector(
+          "#total .total tr:nth-child(1) td:nth-child(2)"
+        );
+        const totalElement = document.querySelector(
+          "#total .total tr:nth-child(2) td:nth-child(2)"
+        );
+        const clearCartButton = document.querySelector(
+          "input[value='Clear Cart']"
+        );
+        const checkoutButton = document.querySelector(
+          "input[value='Proceed to checkout']"
+        );
+
+        function loadCartFromLocalStorage() {
+          const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+          if (cart.length === 0) {
+            cartContainer.innerHTML =
+              '<tr><td colspan="6">Your cart is empty.</td></tr>';
+            updateTotal();
+            return;
+          }
+
+          cart.forEach((item) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td><img src="${item.image}" alt="${
+              item.name
+            }" style="width: 50px;"></td>
+                <td>${item.name}</td>
+                <td>${item.price}</td>
+                <td>
+                    <label>Quantity: <input type="number" value="${
+                      item.quantity
+                    }" min="1"></label>
+                </td>
+                <td>${(
+                  parseFloat(item.price.replace("SR", "")) * item.quantity
+                ).toFixed(2)} SR</td>
+                <td><input type="button" value="×"></td>
+            `;
+            cartContainer.appendChild(row);
+          });
+
+          updateTotal();
+        }
+
+        function saveCartToLocalStorage() {
+          const cartData = [];
+          cartContainer.querySelectorAll("tr").forEach((row) => {
+            const productName = row
+              .querySelector("td:nth-child(2)")
+              .textContent.trim();
+            const productPrice = row
+              .querySelector("td:nth-child(3)")
+              .textContent.trim();
+            const productQuantity = parseInt(
+              row.querySelector("td:nth-child(4) input").value,
+              10
+            );
+            const productImage = row.querySelector("td:nth-child(1) img").src;
+            const productSubtotal =
+              parseFloat(productPrice.replace("SR", "")) * productQuantity;
+
+            cartData.push({
+              name: productName,
+              price: productPrice,
+              quantity: productQuantity,
+              image: productImage,
+              subtotal: productSubtotal,
+            });
+          });
+          localStorage.setItem("cart", JSON.stringify(cartData));
+        }
+
+        function updateTotal() {
+          let total = 0;
+          cartContainer.querySelectorAll("tr").forEach((row) => {
+            const subtotalElement = row.querySelector("td:nth-child(5)");
+            if (subtotalElement) {
+              total +=
+                parseFloat(subtotalElement.textContent.replace("SR", "")) || 0;
+            }
+          });
+          subtotalElement.textContent = `${total.toFixed(2)} SR`;
+          totalElement.textContent = `${total.toFixed(2)} SR`;
+        }
+
+        cartContainer.addEventListener("input", (event) => {
+          if (event.target.type === "number") {
+            const row = event.target.closest("tr");
+            const price = parseFloat(
+              row.querySelector("td:nth-child(3)").textContent.replace("SR", "")
+            );
+            const quantity = parseInt(event.target.value, 10) || 1;
+            row.querySelector("td:nth-child(5)").textContent = `${(
+              price * quantity
+            ).toFixed(2)} SR`;
+
+            updateTotal();
+            saveCartToLocalStorage();
+          }
+        });
+
+        cartContainer.addEventListener("click", (event) => {
+          if (event.target.value === "×") {
+            const row = event.target.closest("tr");
+            row.remove();
+
+            updateTotal();
+            saveCartToLocalStorage();
+          }
+        });
+
+        clearCartButton.addEventListener("click", () => {
+          cartContainer.innerHTML =
+            '<tr><td colspan="6">Your cart is empty.</td></tr>';
+          localStorage.removeItem("cart");
+          updateTotal();
+        });
+
+        checkoutButton.addEventListener("click", () => {
+          const total = totalElement.textContent;
+          alert(`Thank you for your purchase! Total cost: ${total}`);
+          localStorage.removeItem("cart");
+          location.href = "productrate.html";
+        });
+
+        loadCartFromLocalStorage();
+      });
+    </script>
+  </body>
+</html>
