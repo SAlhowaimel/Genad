@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Beans</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking external CSS file -->
+</head>
+<body>
+
+    <header>
+        <a href="index.html"><img id="logo" src="logo.png" alt="Website logo" style="width: 100px; height: auto;"></a>
+        <nav>
+          <a href="userspage.html">User's Page</a>
+          <a href="Seller.html">Seller's Dashboard</a>
+          <a href="cart.html">Cart</a>
+          <div class="categories">
+            <span>Categories:</span>
+            <a href="CoffeeBeans.html">CoffeeBeans</a>
+            <a href="Equipments.html">Equipments</a>
+            <a href="cups.html">Cups</a>
+        </div>
+        </nav>
+  </header>
+    
+
+<main>
+    <section class="products">
+        <h2>Coffee Beans</h2>
+        <div class="sort-options">
+            <span>Sort by:</span>
+            <select id="sort-options">
+                <optgroup label="Price">
+                    <option value="price-low-high">Lower to Higher</option>
+                    <option value="price-high-low">Higher to Lower</option>
+                </optgroup>
+                <optgroup label="Name">
+                    <option value="name-a-z">A to Z</option>
+                    <option value="name-z-a">Z to A</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product card 1 -->
+            <div class="product-card">
+                <img src="cb1.png" alt="Colombia Huila" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Colombia Huila</p>
+                    <p class="product-price">69 SR</p>
+                    <p class="product-description">Peach, Chocolate, Raisin, Grapey <br> 250g</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 2 -->
+            <div class="product-card">
+                <img src="cb2.png" alt="Rwanda Kiboko" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Rwanda Kiboko</p>
+                    <p class="product-price">39 SR</p>
+                    <p class="product-description">Blueberry, Strawberry, Cacao, Fruity <br> 250g</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 3 -->
+            <div class="product-card">
+                <img src="cb33.png" alt="Sarmad Blend" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Sarmad Blend</p>
+                    <p class="product-price">69 SR</p>
+                    <p class="product-description">A classic, balanced flavor perfect for espresso drinks <br> 250g</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 4 -->
+            <div class="product-card">
+                <img src="cb4.png" alt="Costa Rica Tarrazu Washed" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Costa Rica Tarrazu Washed</p>
+                    <p class="product-price">199 SR</p>
+                    <p class="product-description">Comprehensive blend suitable for both espresso and filter <br> 1Kg</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 5 -->
+            <div class="product-card">
+                <img src="cb4.png" alt="Brazil Mogiana" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Brazil Mogiana</p>
+                    <p class="product-price">39 SR</p>
+                    <p class="product-description">Peach, Dark Cacao, Creamy, Nuts <br> 1Kg</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 6 -->
+            <div class="product-card">
+                <img src="cb4.png" alt="Ethiopia Chelchele" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Ethiopia Chelchele</p>
+                    <p class="product-price">55 SR</p>
+                    <p class="product-description">Fruitiness, caramelized sugar, chocolate <br> 1Kg</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 7 -->
+            <div class="product-card">
+                <img src="cb4.png" alt="Uganda Mewzi" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Uganda Mewzi</p>
+                    <p class="product-price">55 SR</p>
+                    <p class="product-description">Comprehensive blend suitable for both espresso and filter <br> 1Kg</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 8 -->
+            <div class="product-card">
+                <img src="cb4.png" alt="El Salvador" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">El Salvador</p>
+                    <p class="product-price">25 SR</p>
+                    <p class="product-description">Cacao Nibs, Caramel, Brown Spice <br> 1Kg</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 9 -->
+            <div class="product-card">
+                <img src="cb4.png" alt="Myanmar Pien Nay Gone" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Myanmar Pien Nay Gone</p>
+                    <p class="product-price">50 SR</p>
+                    <p class="product-description">Blueberry, Caramel, Strawberry <br> 1Kg</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <div class="phone">
+                    <img src="call.png" alt="Phone Icon">
+                    <span>0012297778</span>
+                </div>
+                <div class="email">
+                    <img src="emaill.png" alt="Email Icon">
+                    <span>Genad@core.com</span>
+                </div>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="instagram.png" alt="instagram Icon"></a>
+                <a href="#"><img src="facebook.png" alt="facebook Icon"></a>
+                <a href="#"><img src="twitter.png" alt="twitter Icon"></a>
+            </div>
+            <div class="copy">
+                <span>© 2024 Genad. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+<script src="CategoryCode.js"></script>
+</body>
+</html>
