@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>User's Page</title>
+  </head>
+  <body>
+    <header>
+        <a href="index.html"><img id="logo" src="logo.png" alt="Website logo" style="width: 100px; height: auto;"></a>
+        <nav>
+          <a href="userspage.html">User's Page</a>
+          <a href="Seller.html">Seller's Dashboard</a>
+          <a href="cart.html">Cart</a>
+          <div class="categories">
+            <span>Categories:</span>
+            <a href="CoffeeBeans.html">CoffeeBeans</a>
+            <a href="Equipments.html">Equipments</a>
+            <a href="cups.html">Cups</a>
+        </div>
+        </nav>
+  </header>
+    <div id="userpage" class="pages">
+      <h2>User's Page</h2>
+      <div>
+        <div>
+          <input
+            class="buttonpages"
+            type="button"
+            value="Cart"
+            onclick="location.href='cart.html';"
+          />
+        </div>
+        <div>
+          <input
+            class="buttonpages"
+            type="button"
+            value="Order History"
+            onclick="location.href='orderhistory.html';"
+          />
+        </div>
+        <div>
+          <input
+            class="buttonpages"
+            type="button"
+            value="Product Rate"
+            onclick="location.href='productrate.html';"
+          />
+        </div>
+      </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <div class="phone">
+                    <img src="call.png" alt="Phone Icon">
+                    <span>0012297778</span>
+                </div>
+                <div class="email">
+                    <img src="emaill.png" alt="Email Icon">
+                    <span>Genad@core.com</span>
+                </div>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="instagram.png" alt="instagram Icon"></a>
+                <a href="#"><img src="facebook.png" alt="facebook Icon"></a>
+                <a href="#"><img src="twitter.png" alt="twitter Icon"></a>
+            </div>
+            <div class="copy">
+                <span>© 2024 Genad. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>

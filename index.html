@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img id="logo" src="logo.png" alt="Website logo" style="width: 100px; height: auto;"></a>
+        <nav>
+          <a href="userspage.html">User's Page</a>
+          <a href="Seller.html">Seller's Dashboard</a>
+          <a href="cart.html">Cart</a>
+          <div class="categories">
+            <span>Categories:</span>
+            <a href="CoffeeBeans.html">CoffeeBeans</a>
+            <a href="Equipments.html">Equipments</a>
+            <a href="cups.html">Cups</a>
+        </div>
+        </nav>
+  </header>
+
+    <div id="currentWeek" style="text-align:center; margin-top:10px;"></div>
+
+    <!-- Main Section -->
+    <main>
+        <br><br>
+        <div class="intro">
+                <div class="vision-title"></div>
+                <div class="vision-grid">
+                    <div class="vision-item">
+                        <video autoplay loop muted class="vision-video" id="video1">
+                            <source src="coffee.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="vision-item">
+                        <video autoplay loop muted class="vision-video" id="video2">
+                            <source src="V1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="vision-item">
+                        <video autoplay loop muted class="vision-video" id="video3">
+                            <source src="V2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="vision-item">
+                        <video autoplay loop muted class="vision-video" id="video4">
+                            <source src="V3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <div class="play-overlay" id="playOverlay"></div>
+                <pre style="font-size:20px">
+Coffee is our passion, crafted as a gift for those who savor every moment.
+With each sip, we aim to awaken your senses. We carefully select the finest specialty coffee
+beans to delight every palate. Our beans are sourced from renowned coffee-growing regions
+across the globe—from the East to the West—featuring celebrated origins like Ethiopia, Colombia,
+Costa Rica, El Salvador, and many more.</pre>
+            </div>
+<br><br><br>
+        <section class="categories">
+            <h2>Categories</h2>
+            <div class="category-grid">
+                <div class="category-box">
+                    <a href="Category2.html"><img src="Beans.jpg" alt="Category 1 Image" style="height:200px; width:300px;"></a>
+                    <div>Coffee Beans</div>
+                </div>
+                <div class="category-box">
+                    <a href="Category3.html"><img src="cups.jpg" alt="Category 2 Image" style="height:200px; width:300px;"></a>
+                    <div>Cups</div>
+                </div>
+                <div class="category-box">
+                    <a href="CategoryPage.html"><img src="Eq22 copy.jpg" alt="Category 3 Image" style="height:200px; width:300px;"></a>
+                    <div>Equipments</div>
+                </div>
+            </div>
+        </section>
+	<br><br><br><br>	
+<!-- Offers Section -->
+        <section class="offers">
+            <h2>Offers</h2>
+            <div id="offerGrid" class="offer-grid">
+                <div class="offer-box">
+                    <img src="Rawanda.jpg" alt="Offer 1 Image">
+                    <div>
+                        <strong>Rwanda Kiboko</strong><br>
+                        <pre><s style="color:red;">39 SR</s>  25 SR</pre>
+                        <p>Blueberry, Strawberry, Cacao, Fruity <br> 250g</p>
+                    </div>
+                </div>
+                <div class="offer-box">
+                    <img src="Eq22 copy.jpg" alt="Offer 2 Image">
+                    <div>
+                        <strong>Sage Barista Pro - Black</strong><br>
+                        <pre><s style="color:red;">539 SR</s>  463 SR</pre>
+                        <p>Precision meets speed for perfect espresso at home.</p>
+                    </div>
+                </div>
+                <div class="offer-box">
+                    <img src="chme.jpg" alt="Offer 3 Image">
+                    <div>
+                        <strong>Chemex 6 Cup Classic</strong><br>
+                        <pre><s style="color:red;">155 SR</s>  103 SR</pre>
+                        <p>Elegant pour-over for brewing filter coffee</p>
+                    </div>
+                </div>
+                <div class="offer-box hidden-offer">
+                    <img src="Sarmad.jpg" alt="Offer 4 Image">
+                    <div>
+                        <strong>Sarmad Blend</strong><br>
+                        <pre><s style="color:red;">69 SR</s>  52 SR</pre>
+                        <p>A classic, balanced flavor perfect for espresso drinks <br> 250g</p>
+                    </div>
+                </div>
+                <div class="offer-box hidden-offer">
+                    <img src="cup1..jpg" alt="Offer 5 Image">
+                    <div>
+                        <strong>Espresso Cup</strong><br>
+                        <pre><s style="color:red;">35 SR</s>  24 SR</pre>
+                        <p>A small and stylish ceramic cup</p>
+                    </div>
+                </div>
+                <div class="offer-box hidden-offer">
+                    <img src="morn.jpg" alt="Offer 6 Image">
+                    <div>
+                        <strong>Morning Coffee Machine</strong><br>
+                        <pre><s style="color:red;">199 SR</s> 130 SR</pre>
+                        <p>Perfect for espresso and filter blends.</p>
+                    </div>
+                </div>
+            </div>
+            <button id="showMore" style="display:block; margin: 20px auto; padding: 10px 20px; background-color: #C89970; color: white; border: none; border-radius: 5px; cursor: pointer;">Show More</button>
+        </section>
+<br><br><br><br>
+        <!-- Customer Reviews -->
+        <section class="customer-reviews">
+            <h2>Customer Reviews</h2>
+            <div class="reviews-container">
+                <div class="review-box" data-name="Sara" data-product="Rwanda Kiboko" data-rating="⭐⭐⭐⭐" data-feedback="Nice coffee beans! Great taste.">
+                    <img src="Rawanda.jpg" alt="Product Image" class="review-product-img">
+					<h4>Rwanda Kiboko</h4>
+                    <div class="review-stars">⭐⭐⭐⭐</div>
+                    <div class="review-comment">Nice coffee beans! Great taste.</div>
+                </div>
+              
+                <div class="review-box" data-name="Lamya" data-product="Sage Barista Pro" data-rating="⭐⭐⭐⭐" data-feedback="High-quality espresso machine.">
+                    <img src="Eq22 copy.jpg" alt="Product Image" class="review-product-img">
+					<h4>Sage Barista Pro</h4>
+                    <div class="review-stars">⭐⭐⭐⭐</div>
+                    <div class="review-comment">High-quality espresso machine.</div>
+                </div>
+				 <div class="review-box" data-name="Ghaida" data-product="Chemex 6 Cup" data-rating="⭐⭐⭐⭐⭐" data-feedback="Perfect for pour-over coffee lovers!">
+                    <img src="chme.jpg" alt="Product Image" class="review-product-img">
+					<h4>Chemex 6 Cup</h4>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="review-comment">Perfect for pour-over coffee lovers!</div>
+                </div>
+				<div class="review-box" data-name="Jana" data-product="Latte Cup" data-rating="⭐⭐⭐⭐⭐" data-feedback="Amazing cup!">
+                    <img src="latte.jpg" alt="Product Image" class="review-product-img">
+					<h4>Latte Cup</h4>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="review-comment">Amazing Cup!</div>
+                </div>
+				<div class="review-box" data-name="Nora" data-product="Sage Barista Pro" data-rating="⭐⭐⭐⭐⭐" data-feedback="This espresso machine is amazing.">
+                    <img src="Eq22 copy.jpg" alt="Product Image" class="review-product-img">
+					<h4>Sage Barista Pro</h4>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="review-comment">This espresso machine is amazing.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <div class="phone">
+                    <img src="call.png" alt="Phone Icon">
+                    <span>0012297778</span>
+                </div>
+                <div class="email">
+                    <img src="emaill.png" alt="Email Icon">
+                    <span>Genad@core.com</span>
+                </div>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="instagram.png" alt="instagram Icon"></a>
+                <a href="#"><img src="facebook.png" alt="facebook Icon"></a>
+                <a href="#"><img src="twitter.png" alt="twitter Icon"></a>
+            </div>
+            <div class="copy">
+                <span>© 2024 Genad. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+	
+<!-- Review Hover Container -->
+ <div id="reviewDetail" style="display:none; position:absolute; padding:10px; background-color:#FAE5CF; border:1px solid #C5A886; border-radius:8px; z-index:10;"></div>
+
+<!-- Theme Toggle -->
+<button id="themeToggle" style="position: fixed; bottom: 20px; right: 20px; padding: 10px; background-color: #C89970; color: white; border: none; border-radius: 5px; cursor: pointer;">Switch Theme</button>
+	
+<script>
+        // Display current week's start date
+        function displayCurrentWeek() {
+            const today = new Date();
+            const dayOfWeek = today.getDay();
+            const sunday = new Date(today.getTime() - dayOfWeek * 24 * 60 * 60 * 1000);
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById("currentWeek").innerText = `This week starts on: ${sunday.toLocaleDateString('en-US', options)}`;
+        }
+
+        // Toggle hidden offers
+        function setupOffers() {
+            const showMoreButton = document.getElementById("showMore");
+            const hiddenOffers = document.querySelectorAll(".hidden-offer");
+
+            showMoreButton.addEventListener("click", () => {
+                hiddenOffers.forEach((offer) => {
+                    offer.style.display = "block";
+                });
+                showMoreButton.style.display = "none";
+            });
+        }
+
+        // Show review details on hover
+        function setupReviews() {
+            const reviews = document.querySelectorAll(".review-box");
+            const reviewDetail = document.getElementById("reviewDetail");
+
+            reviews.forEach((review) => {
+                review.addEventListener("mouseover", (e) => {
+                    const name = review.dataset.name;
+                    const product = review.dataset.product;
+                    const rating = review.dataset.rating;
+                    const feedback = review.dataset.feedback;
+
+                    reviewDetail.innerHTML = `
+                        <strong>${name}</strong><br>
+                        <strong>Product:</strong> ${product}<br>
+                        <strong>Rating:</strong> ${rating}<br>
+                        <p>${feedback}</p>
+                    `;
+                    reviewDetail.style.display = "block";
+                    reviewDetail.style.left = `${e.pageX + 10}px`;
+                    reviewDetail.style.top = `${e.pageY + 10}px`;
+                });
+
+                review.addEventListener("mouseout", () => {
+                    reviewDetail.style.display = "none";
+                });
+            });
+        }
+
+// Theme toggle
+function setupThemeToggle() {
+    const body = document.body;
+    let isDarkTheme = false; // Track the current theme state
+
+    document.getElementById("themeToggle").addEventListener("click", () => {
+        isDarkTheme = !isDarkTheme;
+
+        if (isDarkTheme) {
+            // Dark theme
+            body.style.backgroundColor = "#5A4033";
+            body.style.color = "#FDF6E4";
+        } else {
+            // Light theme
+            body.style.backgroundColor = "white";
+            body.style.color = "#5A4033";
+        }
+    });
+}
+        // Initialize all functionalities
+        document.addEventListener("DOMContentLoaded", () => {
+            displayCurrentWeek();
+            setupOffers();
+            setupReviews();
+			setupThemeToggle();
+        });
+		
+		
+    </script>
+</body>
+</html>

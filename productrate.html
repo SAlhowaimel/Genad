@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Product Rate</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        const orderSelect = document.getElementById("orderSelect");
+        const productSelect = document.getElementById("productSelect");
+        const stars = document.getElementById("stars");
+        const ratingStars = Array.from(stars.querySelectorAll("span"));
+
+        let selectedRating = 0;
+
+        ratingStars.forEach((star, index) => {
+          star.addEventListener("click", () => {
+            selectedRating = index + 1;
+            ratingStars.forEach((s, i) => {
+              s.style.color = i < selectedRating ? "gold" : "gray";
+            });
+          });
+        });
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          if (!orderSelect.value) {
+            alert("Please select an order.");
+            return;
+          }
+          if (!productSelect.value) {
+            alert("Please select a product.");
+            return;
+          }
+          if (selectedRating === 0) {
+            alert("Please select a rating.");
+            return;
+          }
+
+          // Display feedback alert
+          const selectedProduct =
+            productSelect.options[productSelect.selectedIndex].value;
+          const productNumber = selectedProduct.replace("product", "");
+          alert(
+            `Thank you for your feedback!\nYour rating for product#${productNumber} is ${selectedRating}.`
+          );
+
+          window.location.href = "HomePage.html";
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+              <a href="index.html"><img id="logo" src="logo.png" alt="Website logo" style="width: 100px; height: auto;"></a>
+
+      <nav>
+        <a href="userspage.html">User's Page</a>
+        <a href="Seller.html">Seller's Dashboard</a>
+        <a href="cart.html">Cart</a>
+        <div class="categories">
+          <span>Categories:</span>
+          <a href="CategoryPage.html">Coffee Beans</a>
+          <a href="Category2.html">Cups</a>
+          <a href="Category3.html">Equipments</a>
+        </div>
+      </nav>
+    </header>
+    <div id="product" class="pages">
+      <h1>Product Rate</h1>
+      <form action="#" method="post">
+        <div class="rating">
+          <label for="orderSelect">Choose Order <span>*</span></label>
+          <select id="orderSelect">
+            <option value="" disabled selected>Select your order</option>
+            <option value="order1">
+              Order #99287 - Date: 19/8/2024 - 430 SR
+            </option>
+            <option value="order2">
+              Order #99550 - Date: 12/1/2024 - 5441 SR
+            </option>
+            <option value="order3">
+              Order #99743 - Date: 22/4/2023 - 230 SR
+            </option>
+          </select>
+        </div>
+
+        <div class="rating">
+          <label for="productSelect">Choose Product <span>*</span></label>
+          <select id="productSelect">
+            <option value="" disabled selected>Select your product</option>
+            <option value="product1">8oz Ceramic Cup - 69 SR</option>
+            <option value="product2">Handmade Coffee Cup - 53 SR</option>
+            <option value="product3">Latte Ceramic Cup - 59 SR</option>
+          </select>
+        </div>
+
+        <div class="rating">
+          <label>Rating: <span>*</span></label>
+          <div id="stars">
+            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span
+            ><span>&#9733;</span><span>&#9733;</span>
+          </div>
+        </div>
+
+        <div class="feedback">
+          <label for="feedback">Share your feedback on the product:</label>
+          <textarea id="feedback" rows="4" placeholder="Text box"></textarea>
+          <input type="submit" value="Done" />
+        </div>
+        <label>Upload a photo: <input type="file" name="photo" /></label>
+      </form>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <div class="phone">
+                    <img src="call.png" alt="Phone Icon">
+                    <span>0012297778</span>
+                </div>
+                <div class="email">
+                    <img src="emaill.png" alt="Email Icon">
+                    <span>Genad@core.com</span>
+                </div>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="instagram.png" alt="instagram Icon"></a>
+                <a href="#"><img src="facebook.png" alt="facebook Icon"></a>
+                <a href="#"><img src="twitter.png" alt="twitter Icon"></a>
+            </div>
+            <div class="copy">
+                <span>© 2024 Genad. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>

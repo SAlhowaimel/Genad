@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Product</title>
+    <link rel="stylesheet" href="style.css">
+	<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            document.getElementById("addProductButton").addEventListener("click", addProduct);
+
+            function addProduct() {
+                
+                const name = document.getElementById("product-name").value.trim();
+                const price = parseFloat(document.getElementById("price").value);
+                const category = document.getElementById("category").value;
+                const quantity = parseInt(document.getElementById("quantity").value, 10);
+                const description = document.getElementById("description").value.trim();
+                const photoInput = document.getElementById("product-photo");
+                const photo = photoInput.files[0];
+
+                
+                if (!name || !price || !description || !photo || !category || quantity <= 0) {
+                    alert("Please fill out all required fields correctly.");
+                    return;
+                }
+
+                if (!isNaN(name[0])) {
+                    alert("Product name cannot start with a number.");
+                    return;
+                }
+
+                if (isNaN(price) || price <= 0) {
+                    alert("Price must be a positive number.");
+                    return;
+                }
+
+                if (isNaN(quantity) || quantity <= 0) {
+                    alert("Quantity must be a positive number.");
+                    return;
+                }
+
+                
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    const photoDataUrl = event.target.result;
+
+                    
+                    const product = {
+                        name,
+                        price,
+                        category,
+                        quantity,
+                        description,
+                        photo: photoDataUrl
+                    };
+
+                    
+                    const products = JSON.parse(localStorage.getItem("products")) || [];
+
+                    
+                    products.push(product);
+
+                    
+                    localStorage.setItem("products", JSON.stringify(products));
+
+                    
+                    alert(`Product "${name}" added successfully!`);
+                    document.getElementById("productForm").reset();
+                };
+
+                reader.readAsDataURL(photo); 
+            }
+        });
+    </script>
+</head>
+<body>
+ 
+    <!-- Navigation Bar -->
+	
+    <header>
+        <a href="index.html"><img id="logo" src="logo.png" alt="Website logo" style="width: 100px; height: auto;"></a>
+      <nav>
+        <a href="userspage.html">User's Page</a>
+        <a href="Seller.html">Seller's Dashboard</a>
+        <a href="cart.html">Cart</a>
+        <div class="categories">
+          <span>Categories:</span>
+          <a href="CoffeeBeans.html">CoffeeBeans</a>
+            <a href="Equipments.html">Equipments</a>
+            <a href="cups.html">Cups</a>
+        </div>
+      </nav>
+</header>
+	
+    <div class="form-container">
+        <h2 id="newp">Add New Product</h2>
+        <form id="productForm"> 
+            <div class="form-group">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="product-photo">Product Photo:</label>
+                <input type="file" id="product-photo" name="product-photo" accept="image/*" required>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category" name="category" size="2" required>
+                    <option value="Coffee-Beans">Coffee Beans</option>
+                    <option value="Cups">Cups</option>
+                    <option value="Equipments">Equipments</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="addProductButton">Add Product</button>
+            </div>
+        </form>
+		</div>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <div class="phone">
+                    <img src="call.png" alt="Phone Icon">
+                    <span>0012297778</span>
+                </div>
+                <div class="email">
+                    <img src="emaill.png" alt="Email Icon">
+                    <span>Genad@core.com</span>
+                </div>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="instagram.png" alt="instagram Icon"></a>
+                <a href="#"><img src="facebook.png" alt="facebook Icon"></a>
+                <a href="#"><img src="twitter.png" alt="twitter Icon"></a>
+            </div>
+            <div class="copy">
+                <span>© 2024 Genad. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

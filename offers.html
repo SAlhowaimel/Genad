@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="Script.js"></script>
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    .manage-offers-container {
+        max-width: 100%;
+        padding: 20px;
+        overflow-x: hidden; 
+    }
+
+    .offer-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; 
+    }
+
+    .offer-item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		gap:10px;
+    }
+
+    .offer-item img {
+        max-width: 50px; 
+        height: auto;
+        margin-right: 10px;
+        border-radius: 5px;
+    }
+
+    .offer-details {
+        flex-grow: 1; 
+        margin-left: 10px;
+    }
+
+    .offer-details h4 {
+        margin: 0;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .offer-details p {
+        margin: 5px 0;
+        color: #555;
+        font-size: 14px;
+        word-wrap: break-word;
+    }
+
+
+
+    .offer input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+    .add-offer-container {
+        margin-top: 30px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .add-offer-container label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .add-offer-container input,
+    .add-offer-container textarea {
+        width: 100%; 
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .add-offer-container textarea {
+        resize: vertical; 
+    }
+
+    .add-offer-container button {
+        background-color: #949ab1;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .add-offer-container button:hover {
+        background-color: #0056b3;
+    }
+	
+	
+
+    .delete-button {
+        background-color: #dc3545;
+        color: #fff;
+        padding: 7px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .delete-button:hover {
+        background-color: #a71d2a;
+    }
+	#deletbutton {
+	 margin-top:5px;
+	}
+	
+  </style>
+  <title>Manage Offers</title>
+</head>
+<body>
+
+  
+ <header>
+        <a href="index.html"><img id="logo" src="logo.png" alt="Website logo" style="width: 100px; height: auto;"></a>
+      <nav>
+        <a href="userspage.html">User's Page</a>
+        <a href="Seller.html">Seller's Dashboard</a>
+        <a href="cart.html">Cart</a>
+        <div class="categories">
+          <span>Categories:</span>
+          <a href="CoffeeBeans.html">CoffeeBeans</a>
+            <a href="Equipments.html">Equipments</a>
+            <a href="cups.html">Cups</a>
+        </div>
+      </nav>
+</header>
+
+  <div class="manage-offers-container">
+    <h2 style="color: gray;">Manage Offers</h2>
+    
+    
+    <form id="delete-offers-form">
+      <div class="offer-list">
+        <div class="offer-item">
+          <input type="checkbox" id="offer1" name="offer" value="offer1">
+          <img src="blackfriday.jpg" alt="Offer 1">
+          <div class="offer-details">
+              <h4>70% Black Friday Offer</h4>
+              <p>Get up to 70% off on all items during our Black Friday sale!</p>
+          </div>
+        </div>
+
+        <div class="offer-item">
+          <input type="checkbox" id="offer2" name="offer" value="offer2">
+          <img src="50per.gif" alt="Offer 2">
+          <div class="offer-details">
+              <h4>50% Outlet Offer</h4>
+              <p>Enjoy 50% off on selected outlet items. Limited time only!</p>
+          </div>
+        </div>
+
+        <div class="offer-item">
+          <input type="checkbox" id="offer3" name="offer" value="offer3">
+          <img src="summeroffer.jpg" alt="Offer 3">
+          <div class="offer-details">
+              <h4>Summer Sale Offer</h4>
+              <p>Shop the summer collection with amazing discounts. Don’t miss out!</p>
+          </div>
+        </div>
+
+        <div class="offer-item">
+          <input type="checkbox" id="offer4" name="offer" value="offer4">
+          <img src="freeship.jpg" alt="Offer 4">
+          <div class="offer-details">
+              <h4>Free Shipping Offer</h4>
+              <p>Get free shipping on all orders above $50. Shop now!</p>
+          </div>
+        </div>
+      </div>
+      <button type="submit" id="deletbutton" class="delet-button">Delete Selected Offers</button>
+    </form>
+    <hr style="color:#f5f5f5;">
+
+    
+    <div class="add-offer-container">
+      <h3 style="color: gray;">Add New Offer</h3>
+      <form id="add-offer-form">
+        <label for="offer-image">Upload Offer Image:</label>
+        <input type="file" id="offer-image" name="offer-image" accept="image/*">
+        
+        <label for="offer-name">Offer Name:</label>
+        <input type="text" id="offer-name" name="offer-name" placeholder="Enter offer name">
+		
+        <label for="offer-description">Offer Description:</label>
+        <textarea id="offer-description" name="offer-description" rows="3" placeholder="Enter offer description"></textarea>
+        
+        <button class="offer-button" type="submit" style= "background-color:#EDE0D4; color:#5A4033;">Add Offer</button>
+      </form>
+    </div>
+  </div>
+  
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <div class="phone">
+                    <img src="call.png" alt="Phone Icon">
+                    <span>0012297778</span>
+                </div>
+                <div class="email">
+                    <img src="emaill.png" alt="Email Icon">
+                    <span>Genad@core.com</span>
+                </div>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="instagram.png" alt="instagram Icon"></a>
+                <a href="#"><img src="facebook.png" alt="facebook Icon"></a>
+                <a href="#"><img src="twitter.png" alt="twitter Icon"></a>
+            </div>
+            <div class="copy">
+                <span>© 2024 Genad. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
