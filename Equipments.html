@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipments Page</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking external CSS file -->
+</head>
+<body>
+
+    <header>
+        <a href="index.html"><img id="logo" src="logo.png" alt="Website logo" style="width: 100px; height: auto;"></a>
+        <nav>
+          <a href="userspage.html">User's Page</a>
+          <a href="Seller.html">Seller's Dashboard</a>
+          <a href="cart.html">Cart</a>
+          <div class="categories">
+            <span>Categories:</span>
+            <a href="CoffeeBeans.html">CoffeeBeans</a>
+            <a href="Equipments.html">Equipments</a>
+            <a href="cups.html">Cups</a>
+        </div>
+        </nav>
+  </header>
+    
+<main>
+    <section class="products">
+        <h2>Equipments</h2>
+        <div class="sort-options">
+            <span>Sort by:</span>
+            <select id="sort-options">
+                <optgroup label="Price">
+                    <option value="price-low-high">Lower to Higher</option>
+                    <option value="price-high-low">Higher to Lower</option>
+                </optgroup>
+                <optgroup label="byName">
+                    <option value="name-a-z">A to Z</option>
+                    <option value="name-z-a">Z to A</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product card 1 -->
+            <div class="product-card">
+                <img src="eq1.JPG" alt="Wilfa Classic Tall Coffee Maker - Black" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Wilfa Classic Tall Coffee Maker</p>
+                    <p class="product-price">169 SR</p>
+                    <p class="product-description">Timeless design and exceptional brewing performance.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 2 -->
+            <div class="product-card">
+                <img src="Eq22.JPG" alt="Sage Barista Pro - Black" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Sage Barista Pro - Black</p>
+                    <p class="product-price">539 SR</p>
+                    <p class="product-description">Precision meets speed for perfect espresso at home.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 3 -->
+            <div class="product-card">
+                <img src="eq3.JPG" alt="SOPAL One - White" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">SOPAL One - White</p>
+                    <p class="product-price">69 SR</p>
+                    <p class="product-description">The Opal ONE makes pod brewing easy and delicious.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 4 -->
+            <div class="product-card">
+                <img src="Morning-4.jpg" alt="Morning Coffee Machine" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Morning Coffee Machine</p>
+                    <p class="product-price">199 SR</p>
+                    <p class="product-description">Perfect for espresso and filter blends.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 5 -->
+            <div class="product-card">
+                <img src="eq5.jpg" alt="Fellow Aiden Electric Coffee Maker" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Fellow Aiden Electric Maker</p>
+                    <p class="product-price">339 SR</p>
+                    <p class="product-description">Brew pour-over coffee with the press of a button.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 6 -->
+            <div class="product-card">
+                <img src="eq88.jpeg" alt="Sage Bambino - Steel" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Sage Bambino - Steel</p>
+                    <p class="product-price">55 SR</p>
+                    <p class="product-description">The perfect starter espresso machine.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 7 -->
+            <div class="product-card">
+                <img src="eq77.png" alt="Chemex 6 Cup Classic" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Chemex 6 Cup Classic</p>
+                    <p class="product-price">155 SR</p>
+                    <p class="product-description">Elegant pour-over for brewing filter coffee.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 8 -->
+            <div class="product-card">
+                <img src="eq88.jpg" alt="Sage Dual Boiler - Steel" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Sage Dual Boiler - Steel</p>
+                    <p class="product-price">575 SR</p>
+                    <p class="product-description">A professional espresso experience at home.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 9 -->
+            <div class="product-card">
+                <img src="eqnine.jpg" alt="Wilfa Uniform Coffee Grinder" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Wilfa Uniform Coffee Grinder</p>
+                    <p class="product-price">175 SR</p>
+                    <p class="product-description">Revolutionizing brewing at home or the office.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <div class="phone">
+                    <img src="call.png" alt="Phone Icon">
+                    <span>0012297778</span>
+                </div>
+                <div class="email">
+                    <img src="emaill.png" alt="Email Icon">
+                    <span>Genad@core.com</span>
+                </div>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="instagram.png" alt="instagram Icon"></a>
+                <a href="#"><img src="facebook.png" alt="facebook Icon"></a>
+                <a href="#"><img src="twitter.png" alt="twitter Icon"></a>
+            </div>
+            <div class="copy">
+                <span>© 2024 Genad. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+<script src="CategoryCode.js"></script>
+</body>
+</html>

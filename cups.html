@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Page</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking external CSS file -->
+</head>
+<body>
+
+    <header>
+        <a href="index.html"><img id="logo" src="logo.png" alt="Website logo" style="width: 100px; height: auto;"></a>
+        <nav>
+          <a href="userspage.html">User's Page</a>
+          <a href="Seller.html">Seller's Dashboard</a>
+          <a href="cart.html">Cart</a>
+          <div class="categories">
+            <span>Categories:</span>
+            <a href="CoffeeBeans.html">CoffeeBeans</a>
+            <a href="Equipments.html">Equipments</a>
+            <a href="cups.html">Cups</a>
+        </div>
+        </nav>
+  </header>
+
+<main>
+    <section class="products">
+        <h2>Cups</h2>
+        <div class="sort-options">
+            <span>Sort by:</span>
+            <select id="sort-options">
+                <optgroup label="Price">
+                    <option value="price-low-high">Lower to Higher</option>
+                    <option value="price-high-low">Higher to Lower</option>
+                </optgroup>
+                <optgroup label="byName">
+                    <option value="name-a-z">A to Z</option>
+                    <option value="name-z-a">Z to A</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product card 1 -->
+            <div class="product-card">
+                <img src="cup1.jpg" alt="A handmade ceramic cup." class="product-image">
+                <div class="product-info">
+                    <p class="product-name">8oz Ceramic Cup</p>
+                    <p class="product-price">69 SR</p>
+                    <p class="product-description">A handmade ceramic mug with a plate featuring unique inscriptions.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 2 -->
+            <div class="product-card">
+                <img src="cup2.jpg" alt="A handmade coffee cup." class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Handmade Coffee Cup</p>
+                    <p class="product-price">53 SR</p>
+                    <p class="product-description">A handcrafted coffee mug made of durable ceramics.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 3 -->
+            <div class="product-card">
+                <img src="cup3.jpg" alt="A latte cup." class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Latte Ceramic Cup</p>
+                    <p class="product-price">59 SR</p>
+                    <p class="product-description">A beautifully crafted ceramic cup designed for lattes.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 4 -->
+            <div class="product-card">
+                <img src="cup4.jpg" alt="Morning Coffee Cup" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Morning Coffee Cup</p>
+                    <p class="product-price">79 SR</p>
+                    <p class="product-description">A mug with a coaster featuring an elegant morning phrase.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 5 -->
+            <div class="product-card">
+                <img src="eq9.jpg" alt="Latte Art Cup" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Latte Art Cup</p>
+                    <p class="product-price">55 SR</p>
+                    <p class="product-description">A delicate latte art ceramic cup for coffee enthusiasts.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 6 -->
+            <div class="product-card">
+                <img src="cup6.jpg" alt="Classic Ceramic Cup" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Classic Ceramic Cup</p>
+                    <p class="product-price">57 SR</p>
+                    <p class="product-description">A timeless ceramic cup perfect for any beverage.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 7 -->
+            <div class="product-card">
+                <img src="cup5.jpeg" alt="Chemex Coffee Cup" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Chemex Coffee Cup</p>
+                    <p class="product-price">155 SR</p>
+                    <p class="product-description">A premium cup designed for Chemex pour-over coffee lovers.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 8 -->
+            <div class="product-card">
+                <img src="lastcup.jpg" alt="Espresso Cup" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Espresso Cup</p>
+                    <p class="product-price">35 SR</p>
+                    <p class="product-description">A small and stylish ceramic cup for espresso lovers.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+
+            <!-- Product card 9 -->
+            <div class="product-card">
+                <img src="cup9.jpeg" alt="Cappuccino Cup" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Cappuccino Cup</p>
+                    <p class="product-price">50 SR</p>
+                    <p class="product-description">A modern ceramic cappuccino cup with a smooth finish.</p>
+                    <div class="quantity-control">
+                        <button class="decrease-quantity">-</button>
+                        <input type="number" class="quantity" value="1" min="1">
+                        <button class="increase-quantity">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <div class="phone">
+                    <img src="call.png" alt="Phone Icon">
+                    <span>0012297778</span>
+                </div>
+                <div class="email">
+                    <img src="emaill.png" alt="Email Icon">
+                    <span>Genad@core.com</span>
+                </div>
+            </div>
+            <div class="social-media">
+                <a href="#"><img src="instagram.png" alt="instagram Icon"></a>
+                <a href="#"><img src="facebook.png" alt="facebook Icon"></a>
+                <a href="#"><img src="twitter.png" alt="twitter Icon"></a>
+            </div>
+            <div class="copy">
+                <span>© 2024 Genad. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+<script src="CategoryCode.js"></script>
+</body>
+</html>
